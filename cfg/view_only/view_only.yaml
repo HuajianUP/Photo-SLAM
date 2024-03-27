@@ -1,0 +1,84 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# Model Parameters
+#--------------------------------------------------------------------------------------------
+
+Model.sh_degree: 3 # maximum
+Model.resolution: -1.0
+Model.white_background: 0  # 0:false, 1 or other integer:true
+Model.eval: 0  # 0:false, 1 or other integer:true
+
+#--------------------------------------------------------------------------------------------
+# Pipeline Parameters
+#--------------------------------------------------------------------------------------------
+
+Camera.z_near: 0.01
+Camera.z_far: 100.0
+Monocular.inactive_geo_densify_max_pixel_dist: 0.0 # NOT used
+Stereo.min_disparity: 0 # NOT used
+Stereo.num_disparity: 0 # NOT used
+RGBD.min_depth: 0.0 # NOT used
+RGBD.max_depth: 0.0 # NOT used
+
+Mapper.inactive_geo_densify: 0 # NOT used
+Mapper.depth_cache: 0 # NOT used
+Mapper.min_num_initial_map_kfs: 0 # NOT used
+Mapper.new_keyframe_times_of_use: 1
+Mapper.local_BA_increased_times_of_use: 0 # NOT used
+Mapper.loop_closure_increased_times_of_use_: 0 # NOT used
+Mapper.cull_keyframes: 0 # NOT used
+Mapper.large_rotation_threshold: 0.0 # NOT used
+Mapper.large_translation_threshold: 0.0 # NOT used
+Mapper.stable_num_iter_existence: 0 # NOT used
+
+GausPyramid.do: 0 # NOT used
+GausPyramid.num_sub_levels: 2 # NOT used
+GausPyramid.sub_level_times_of_use: 8 # NOT used
+
+Pipeline.convert_SHs: 0 # NOT used
+Pipeline.compute_cov3D: 0 # NOT used
+
+Record.keyframe_record_interval: 0 # NOT used
+Record.all_keyframes_record_interval: 6000 # NOT used
+Record.record_rendered_image: 1 # NOT used
+Record.record_ground_truth_image: 0 # NOT used
+Record.record_loss_image: 0 # NOT used
+Record.training_report_interval: 1000 # NOT used
+Record.record_loop_ply: 0 # NOT used
+
+#--------------------------------------------------------------------------------------------
+# Optimization Parameters # NOT used
+#--------------------------------------------------------------------------------------------
+
+# Learning rate
+Optimization.max_num_iterations: 30100
+Optimization.position_lr_init: 0.00016
+Optimization.position_lr_final: 0.0000016
+Optimization.position_lr_delay_mult: 0.01
+Optimization.position_lr_max_steps: 30000
+Optimization.feature_lr: 0.0025
+Optimization.opacity_lr: 0.05
+Optimization.scaling_lr: 0.005
+Optimization.rotation_lr: 0.001
+
+# Densification
+Optimization.percent_dense: 0.01
+Optimization.lambda_dssim: 0.2
+Optimization.densification_interval: 100
+Optimization.opacity_reset_interval: 3000
+Optimization.prune_big_point_after_iter: 30000
+Optimization.densify_min_opacity: 0.005
+Optimization.densify_from_iter: 500
+Optimization.densify_until_iter: 15000
+Optimization.densify_grad_threshold: 0.0002
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+
+GaussianViewer.glfw_window_width: 1400
+GaussianViewer.glfw_window_height: 1050
+GaussianViewer.image_scale: 0.5 # NOT used
+GaussianViewer.image_scale_main: 1.0
+GaussianViewer.camera_watch_dist: 0.000001 # NOT used

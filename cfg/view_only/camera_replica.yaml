@@ -1,0 +1,16 @@
+%YAML:1.0
+
+Camera.type: "Pinhole"
+
+Camera.w: 1200
+Camera.h: 680
+Camera.fx: 600.0
+Camera.fy: 600.0
+Camera.cx: 599.5
+Camera.cy: 339.5
+
+Camera.k1: 0.0
+Camera.k2: 0.0
+Camera.p1: 0.0
+Camera.p2: 0.0
+Camera.k3: 0.0
