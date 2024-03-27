@@ -2,7 +2,7 @@
 ### [Homepage](https://huajianup.github.io/research/Photo-SLAM/) | [Paper](https://arxiv.org/abs/2311.16728)
 
 **Photo-SLAM: Real-time Simultaneous Localization and Photorealistic Mapping for Monocular, Stereo, and RGB-D Cameras** <br>
-[Huajian Huang](https://huajianup.github.io)<sup>1</sup>, Longwei Li<sup>2</sup>, Hui Cheng<sup>2</sup>, and [Sai-Kit Yeung](https://saikit.org/)<sup>1</sup> <br>
+[Huajian Huang](https://huajianup.github.io)<sup>1</sup>, [Longwei Li](https://github.com/liquorleaf)<sup>2</sup>, Hui Cheng<sup>2</sup>, and [Sai-Kit Yeung](https://saikit.org/)<sup>1</sup> <br>
 The Hong Kong University of Science and Technology<sup>1</sup>, Sun Yat-Sen University<sup>2</sup> <br>
 In Proceedings of Computer Vision and Pattern Recognition Conference (CVPR), 2024<br>
 ![image](https://huajianup.github.io/thumbnails/Photo-SLAM_v2.gif "photo-slam")
@@ -115,8 +115,8 @@ set(OpenCV_DIR /your_preferred_path/lib/cmake/opencv4)
 
 ## Installation of Photo-SLAM
 ```
-git clone https://github.com/liquorleaf/photo-slam.git
-cd photo-slam/
+git clone https://github.com/HuajianUP/Photo-SLAM.git
+cd Photo-SLAM/
 chmod +x ./build.sh
 ./build.sh
 ```
