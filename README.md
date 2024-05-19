@@ -9,6 +9,13 @@ In Proceedings of Computer Vision and Pattern Recognition Conference (CVPR), 202
 
 
 ## Prerequisites
+
+### (Optional) Using Docker
+
+[#2@XuYinzhe](https://github.com/HuajianUP/Photo-SLAM/issues/2#issuecomment-2089933703) provides a Docker example.
+
+### Dependencies
+
 ```
 sudo apt install libeigen3-dev libboost-all-dev libjsoncpp-dev libopengl-dev mesa-utils libglfw3-dev libglm-dev
 ```
