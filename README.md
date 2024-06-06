@@ -171,8 +171,7 @@ chmod +x ./*.sh
 git clone https://github.com/HuajianUP/Photo-SLAM-eval.git
 ```
 <details>
-	
-## Prerequisites
+
 To use this toolkit, you have to ensure your results on each dataset are stored in the correct format. If you use our `./xxx.sh` scripts to conduct experiments, the results are stored in
 ```
 results
@@ -218,8 +217,7 @@ cp ./Photo-SLAM-eval/TUM/fr1/camera.yaml PATH_TO_TUM_DATASET/rgbd_dataset_freibu
 cp ./Photo-SLAM-eval/TUM/fr2/camera.yaml PATH_TO_TUM_DATASET/rgbd_dataset_freiburg2_xyz
 ```
 
-## Evaluation
-To get all metrics, you can run 
+### To get all metrics, you can run 
 ```
 python ./Photo-SLAM-eval/onekey.py --dataset_center_path PATH_TO_ALL_DATASET --result_main_folder RESULTS_PATH
 ```
