@@ -164,10 +164,68 @@ chmod +x ./*.sh
 # etc.
 ```
 
-3. Evaluation (TODO)
-- [ ] evaluation code
 
 
+## Photo-SLAM Evaluation
+```
+git clone https://github.com/HuajianUP/Photo-SLAM-eval.git
+```
+<details>
+	
+## Prerequisites
+To use this toolkit, you have to ensure your results on each dataset are stored in the correct format. If you use our `./xxx.sh` scripts to conduct experiments, the results are stored in
+```
+results
+├── replica_mono_0
+│   ├── office0
+│   ├── ....
+│   └── room2
+├── replica_rgbd_0
+│   ├── office0
+│   ├── ....
+│   └── room2
+│
+└── [replica/tum/euroc]_[mono/stereo/rgbd]_num  ....
+    ├── scene_1
+    ├── ....
+    └── scene_n
+```
+
+
+### Install required python package
+```
+pip install evo numpy scipy scikit-image lpips pillow tqdm plyfile
+```
+
+### (Optional) install submodel for rendering
+```
+# If you have installed original GS submodel, you can skip these steps.
+
+pip install submodules/simple-knn/ 
+pip install submodules/diff-gaussian-rasterization/
+```
+
+### Convert Replica GT camera pose files to suitable pose files to run EVO package
+```
+python ./Photo-SLAM-eval/shapeReplicaGT.py --replica_dataset_path PATH_TO_REPLICA_DATASET
+```
+
+### Copy TUM camera.yaml to the corresponding dataset path
+Since images on some sequences of TUM dataset contain distortion, we need to undistort the ground truth images before evaluation.
+In addition, the file `camera.yaml` is used as an indicator in `run.py`.
+```
+cp ./Photo-SLAM-eval/TUM/fr1/camera.yaml PATH_TO_TUM_DATASET/rgbd_dataset_freiburg1_desk
+cp ./Photo-SLAM-eval/TUM/fr2/camera.yaml PATH_TO_TUM_DATASET/rgbd_dataset_freiburg2_xyz
+```
+
+## Evaluation
+To get all metrics, you can run 
+```
+python ./Photo-SLAM-eval/onekey.py --dataset_center_path PATH_TO_ALL_DATASET --result_main_folder RESULTS_PATH
+```
+Finally, you are supposed to get two files including `RESULTS_PATH/log.txt` and `RESULTS_PATH/log.csv`.
+
+</details>
 
 
 ## Photo-SLAM Examples with Real Cameras
