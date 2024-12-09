@@ -219,6 +219,20 @@ target_link_libraries(tum_rgbd
     gaussian_mapper
     ${ORB_SLAM3_SOURCE_DIR}/lib/libORB_SLAM3.so)
 
+# Stihl Monocular
+add_executable(stihl_mono examples/stihl_mono.cpp)
+target_link_libraries(stihl_mono
+    gaussian_viewer    
+    gaussian_mapper
+    ${ORB_SLAM3_SOURCE_DIR}/lib/libORB_SLAM3.so)
+
+# Stihl RGBD
+add_executable(stihl_rgbd examples/stihl_rgbd.cpp)
+target_link_libraries(stihl_rgbd
+    gaussian_viewer    
+    gaussian_mapper
+    ${ORB_SLAM3_SOURCE_DIR}/lib/libORB_SLAM3.so)
+
 # EuRoC Stereo
 add_executable(euroc_stereo examples/euroc_stereo.cpp)
 target_link_libraries(euroc_stereo

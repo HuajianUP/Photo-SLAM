@@ -1,0 +1,12 @@
+{
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "container",
+    "overrideCommand": true,
+    "initializeCommand": [
+        ".devcontainer/initialize_command"
+    ],
+    "workspaceFolder": "/workspace",
+    "runArgs": [
+        "--gpus=all"
+    ]
+}
